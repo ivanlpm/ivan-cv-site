@@ -133,11 +133,11 @@ const cvData = {
     cloudDevops: ["Docker", "GCP", "Bitbucket Pipelines", "Grafana", "Kibana", "CI/CD"],
     aiAutomation: ["Copilot", "Codex", "Prompt Engineering", "Instruction Design", "AI Workflows", "Automation Patterns"]
   },
-  finalCta: {
-    title: "Let’s Work Together",
+  contactSection: {
+    title: "Contact",
     text:
-      "Looking for a Backend Engineer who can build scalable systems, improve performance, and deliver measurable engineering impact.",
-    buttonLabel: "Contact Me"
+      "If you want to connect about backend engineering, Java, microservices, or AI enablement, feel free to reach out.",
+    buttonLabel: "Send Email"
   },
   education: [
     "Bachelor's Degree in Software Engineering - University of Malaga (2021)",
@@ -285,15 +285,16 @@ function renderSkillsByCategory() {
   });
 }
 
-function renderFinalCta() {
-  setText("final-cta-title", cvData.finalCta.title);
-  setText("final-cta-text", cvData.finalCta.text);
-  setText("final-cta-button", cvData.finalCta.buttonLabel);
+function renderContactSection() {
+  setText("contact-title", cvData.contactSection.title);
+  setText("contact-text", cvData.contactSection.text);
+  setText("contact-button", cvData.contactSection.buttonLabel);
 
-  setLink("final-cta-button", `mailto:${cvData.contacts.primaryEmail}`);
-  setLink("final-email", `mailto:${cvData.contacts.primaryEmail}`, cvData.contacts.primaryEmail);
-  setLink("final-linkedin", cvData.contacts.linkedinUrl);
-  setLink("final-github", cvData.contacts.githubUrl);
+  setLink("contact-button", `mailto:${cvData.contacts.primaryEmail}`);
+  setLink("contact-primary-email", `mailto:${cvData.contacts.primaryEmail}`, cvData.contacts.primaryEmail);
+  setLink("contact-secondary-email", `mailto:${cvData.contacts.secondaryEmail}`, cvData.contacts.secondaryEmail);
+  setLink("contact-linkedin", cvData.contacts.linkedinUrl);
+  setLink("contact-github", cvData.contacts.githubUrl);
 }
 
 function renderList(id, values) {
@@ -373,7 +374,7 @@ function boot() {
 
   renderProfessionalSummary();
   renderSkillsByCategory();
-  renderFinalCta();
+  renderContactSection();
   renderList("education-list", cvData.education);
   renderList("languages-list", cvData.languagesSpoken);
   renderList("cert-list", cvData.certifications);
