@@ -10,7 +10,7 @@
   <rect width="1200" height="630" fill="url(#bg)" />
   <rect x="56" y="56" width="1088" height="518" rx="24" fill="#fffdf8" stroke="#d8dccf" stroke-width="2" />
   <text x="100" y="220" font-family="Georgia, serif" font-size="72" fill="#1e241f">Ivan Lopez Marchante</text>
-  <text x="100" y="290" font-family="Arial, sans-serif" font-size="36" fill="#3f5442">Backend Developer | AI Agent Workflows | Java &amp; Go</text>
+  <text x="100" y="290" font-family="Arial, sans-serif" font-size="36" fill="#3f5442">Backend Developer | AI Agent Workflows | Java</text>
   <text x="100" y="360" font-family="Arial, sans-serif" font-size="28" fill="#5e675f">Microservices, Copilot/Codex Enablement, Engineering Excellence</text>
   <text x="100" y="460" font-family="Arial, sans-serif" font-size="24" fill="#3f5442">ivanlpm.github.io/ivan-cv-site</text>
 </svg>

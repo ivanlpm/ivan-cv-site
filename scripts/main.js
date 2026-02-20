@@ -1,7 +1,7 @@
 const cvData = {
   profile: {
     name: "Ivan Lopez Marchante",
-    title: "Backend Developer | AI Agents, Prompt Engineering & Java/Go",
+    title: "Backend Developer | AI Agents, Prompt Engineering & Java",
     location: "Malaga, Spain",
     summary:
       "Backend engineer delivering reliable microservices while driving practical AI adoption through prompts, reusable instructions, and skill-based agent workflows."
