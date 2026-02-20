@@ -6,10 +6,8 @@ const cvData = {
     heroSummary:
       "Java-focused Backend Engineer building high-reliability APIs, scalable microservices, and practical AI workflows that improve engineering delivery outcomes.",
     professionalSummary: [
-      "Backend Engineer specialized in Java microservices, REST API development, and scalable architecture design for high-demand business domains.",
-      "Experienced in performance optimization, reliability hardening, and production incident reduction across distributed systems.",
-      "Strong execution in delivery acceleration through reusable automation patterns and AI workflows integrated into day-to-day engineering.",
-      "Cross-team collaborator who aligns technical decisions with measurable business impact and sustainable long-term maintainability."
+      "Backend engineer with strong Java background, focused on reliable microservices and practical AI enablement.",
+      "I combine software delivery with repeatable workflows for prompts, instructions, and skills to improve quality, speed, and team consistency."
     ]
   },
   contacts: {
