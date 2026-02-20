@@ -20,6 +20,10 @@ Single-page professional CV website for **Iván López Marchante**, designed for
 - `assets/cv/IVAN LOPEZ MARCHANTE CV-2.pdf`
 - `assets/img/profile.jpg` (required portrait)
 - `assets/img/profile.webp` (optional optimized portrait)
+- `assets/img/favicon.svg`
+- `assets/img/favicon-32.png`
+- `assets/img/favicon-16.png`
+- `assets/img/apple-touch-icon.png`
 - `.github/workflows/pages.yml`
 
 ## Local preview
