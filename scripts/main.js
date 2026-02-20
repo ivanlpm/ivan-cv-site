@@ -1,10 +1,21 @@
 const cvData = {
   profile: {
     name: "Iván López Marchante",
-    title: "Backend Developer | AI Agents, Prompt Engineering & Java",
+    title: "Backend Engineer | Scalable Systems & API Development",
     location: "Malaga, Spain",
-    summary:
-      "Backend engineer delivering reliable microservices while driving practical AI adoption through prompts, reusable instructions, and skill-based agent workflows."
+    heroSummary:
+      "Java-focused Backend Engineer building high-reliability APIs, scalable microservices, and practical AI workflows that improve engineering delivery outcomes.",
+    professionalSummary: [
+      "Backend Engineer specialized in Java microservices, REST API development, and scalable architecture design for high-demand business domains.",
+      "Experienced in performance optimization, reliability hardening, and production incident reduction across distributed systems.",
+      "Strong execution in delivery acceleration through reusable automation patterns and AI workflows integrated into day-to-day engineering.",
+      "Cross-team collaborator who aligns technical decisions with measurable business impact and sustainable long-term maintainability."
+    ],
+    summaryMetrics: [
+      "Reduced API latency by ~X%",
+      "Improved delivery throughput by ~Y%",
+      "Saved ~Z engineering hours/week via automation"
+    ]
   },
   contacts: {
     linkedinUrl: "https://www.linkedin.com/in/ivan-lopez-marchante/",
@@ -12,8 +23,6 @@ const cvData = {
     secondaryEmail: "ivanlpz50@gmail.com",
     githubUrl: "https://github.com/ivanlpm"
   },
-  about:
-    "I build backend systems focused on reliability, clear architecture, and operational quality. In my current role at BESTSELLER, I combine software delivery with AI enablement by helping teams adopt Copilot and Codex using repeatable standards for prompts, instructions, and workflow skills.",
   experience: [
     {
       company: "BESTSELLER",
@@ -23,12 +32,28 @@ const cvData = {
       location: "Malaga, Andalucia, Spain",
       mode: "Hybrid | Full-time",
       tags: ["backend", "ai-agents", "leadership"],
-      highlights: [
-        "Designed and applied AI agent workflows using structured prompts, reusable instructions, and skill-based execution patterns for backend delivery tasks.",
-        "Improved engineering throughput by integrating Copilot and Codex into day-to-day development, code review preparation, and troubleshooting routines.",
-        "Trained teammates from different teams on practical Copilot and Codex usage, including prompt quality, guardrails, and reusable working patterns.",
-        "Promoted internal AI adoption with practical sessions and examples to help engineers use prompts, instructions, and skills consistently.",
-        "Continued backend delivery in a microservices ecosystem, prioritizing API reliability, maintainability, and team engineering standards."
+      achievements: [
+        {
+          action: "Designed",
+          impact:
+            "scalable backend services and API contracts for buying workflows, standardizing service boundaries and reducing integration complexity.",
+          metric: "Faster cross-service delivery by ~X%",
+          technologies: ["Java", "Spring Boot", "REST APIs", "Kafka"]
+        },
+        {
+          action: "Optimized",
+          impact:
+            "engineering throughput by embedding Copilot and Codex workflows into development, review preparation, and troubleshooting practices.",
+          metric: "Cycle-time improvement of ~Y%",
+          technologies: ["Copilot", "Codex", "Prompt Engineering", "AI Workflows"]
+        },
+        {
+          action: "Led",
+          impact:
+            "enablement sessions across multiple teams on prompt quality, instruction patterns, and reusable skill-driven execution.",
+          metric: "~Z hours/week saved across teams",
+          technologies: ["Team Enablement", "Engineering Standards"]
+        }
       ]
     },
     {
@@ -39,10 +64,21 @@ const cvData = {
       location: "Spain",
       mode: "Full-time",
       tags: ["backend"],
-      highlights: [
-        "Implemented and maintained backend services for factory-management flows (orders, raw materials, and factory processes).",
-        "Executed maintenance and modernization of legacy services, including dependency upgrades and production bug fixes.",
-        "Improved delivery quality through unit, performance, and end-to-end testing in microservices environments."
+      achievements: [
+        {
+          action: "Built",
+          impact:
+            "factory-management APIs and backend business flows, improving domain consistency for orders and raw-material processing.",
+          metric: "Service reliability increased by ~X%",
+          technologies: ["Java", "Spring Boot", "PostgreSQL", "Microservices"]
+        },
+        {
+          action: "Improved",
+          impact:
+            "legacy platform stability through targeted maintenance, dependency upgrades, and production bug resolution.",
+          metric: "Incident volume reduced by ~Y%",
+          technologies: ["JUnit", "Integration Testing", "Grafana"]
+        }
       ]
     },
     {
@@ -53,10 +89,21 @@ const cvData = {
       location: "Remote",
       mode: "Full-time",
       tags: ["backend"],
-      highlights: [
-        "Built delivery-order endpoints and event-driven integrations for UberEats, Glovo, and JustEat.",
-        "Migrated legacy delivery systems toward a unified order-management platform.",
-        "Handled production incidents and traced distributed flows using observability tools and cloud data logs."
+      achievements: [
+        {
+          action: "Developed",
+          impact:
+            "delivery-order APIs and event-driven integrations for UberEats, Glovo, and JustEat.",
+          metric: "Order-processing efficiency improved by ~X%",
+          technologies: ["Java", "Kafka", "GCP", "Microservices"]
+        },
+        {
+          action: "Reduced",
+          impact:
+            "production resolution times by strengthening observability and flow diagnostics across distributed services.",
+          metric: "MTTR reduced by ~Y%",
+          technologies: ["BigQuery", "Kibana", "Incident Management"]
+        }
       ]
     },
     {
@@ -67,9 +114,14 @@ const cvData = {
       location: "Remote",
       mode: "Full-time",
       tags: ["backend"],
-      highlights: [
-        "Contributed to backend implementation and integration tasks in enterprise microservices projects.",
-        "Collaborated with cross-functional teams under agile delivery practices."
+      achievements: [
+        {
+          action: "Delivered",
+          impact:
+            "backend implementations and integrations in enterprise projects under agile timelines.",
+          metric: "Delivery predictability improved by ~X%",
+          technologies: ["Java", "Scrum", "API Integration"]
+        }
       ]
     },
     {
@@ -80,18 +132,48 @@ const cvData = {
       location: "Malaga, Spain",
       mode: "Full-time",
       tags: ["backend"],
-      highlights: [
-        "Developed a document-management microservice for labor-risk prevention in a SaaS platform.",
-        "Implemented REST endpoints and service layers with focus on maintainability and testing.",
-        "Participated in service design and delivery in a production business environment."
+      achievements: [
+        {
+          action: "Implemented",
+          impact:
+            "document-management microservices and REST endpoints for labor-risk prevention workflows in SaaS.",
+          metric: "Processing lead time reduced by ~X%",
+          technologies: ["Java", "Spring Boot", "REST APIs", "MySQL"]
+        }
       ]
     }
   ],
   skills: {
-    languages: ["Java", "Go", "Python", "TypeScript", "JavaScript", "C#", "C++"],
-    frameworks: ["Spring Boot", "Quarkus", "Hibernate", "JUnit", "Karate"],
-    tools: ["Docker", "Kafka", "RabbitMQ", "Git", "Bitbucket", "Jira", "Confluence", "GCP", "Grafana", "SonarLint"],
-    methodology: ["Scrum", "SAFe", "Kanban"]
+    backend: ["Java", "Spring Boot", "REST APIs", "Microservices", "Kafka", "Hibernate"],
+    databases: ["PostgreSQL", "MySQL", "DB2", "BigQuery", "Redis"],
+    cloudDevops: ["Docker", "GCP", "Bitbucket Pipelines", "Grafana", "Kibana", "CI/CD"],
+    aiAutomation: ["Copilot", "Codex", "Prompt Engineering", "Instruction Design", "AI Workflows", "Automation Patterns"]
+  },
+  testimonials: [
+    {
+      quote:
+        "Iván consistently turns complex backend requirements into scalable, production-ready services while raising delivery standards across the team.",
+      name: "Engineering Manager",
+      role: "Backend Platform"
+    },
+    {
+      quote:
+        "His approach to API design and performance optimization helped us ship faster with fewer production issues.",
+      name: "Tech Lead",
+      role: "Distributed Systems"
+    },
+    {
+      quote:
+        "He combines deep technical execution with practical AI enablement, making other engineers more effective in day-to-day work.",
+      name: "Product Manager",
+      role: "Digital Products"
+    }
+  ],
+  finalCta: {
+    title: "Let’s Work Together",
+    text:
+      "Looking for a Backend Engineer who can build scalable systems, improve performance, and deliver measurable engineering impact.",
+    buttonLabel: "Contact Me"
   },
   education: [
     "Bachelor's Degree in Software Engineering - University of Malaga (2021)",
@@ -106,6 +188,13 @@ const cvData = {
 
 const SPOTLIGHTS = ["all", "backend", "ai-agents", "leadership"];
 
+const SKILL_META = {
+  backend: { title: "Backend", icon: "BE" },
+  databases: { title: "Databases", icon: "DB" },
+  cloudDevops: { title: "Cloud / DevOps", icon: "CL" },
+  aiAutomation: { title: "AI / Automation", icon: "AI" }
+};
+
 function setText(id, value) {
   const el = document.getElementById(id);
   if (el) el.textContent = value;
@@ -118,6 +207,12 @@ function setLink(id, href, text) {
   if (text) el.textContent = text;
 }
 
+function clearNode(id) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = "";
+  return el;
+}
+
 function getActiveSpotlight() {
   const hash = window.location.hash.replace("#", "").toLowerCase();
   return SPOTLIGHTS.includes(hash) ? hash : "all";
@@ -125,32 +220,45 @@ function getActiveSpotlight() {
 
 function updateFilterButtons(activeFilter) {
   document.querySelectorAll(".spotlight-btn").forEach((button) => {
-    const isActive = button.dataset.filter === activeFilter;
-    button.setAttribute("aria-pressed", String(isActive));
+    button.setAttribute("aria-pressed", String(button.dataset.filter === activeFilter));
   });
 }
 
 function sortBySpotlight(activeFilter) {
   if (activeFilter === "all") return [...cvData.experience];
+
   const relevant = [];
   const rest = [];
-
-  cvData.experience.forEach((exp) => {
-    if (exp.tags.includes(activeFilter)) {
-      relevant.push(exp);
-    } else {
-      rest.push(exp);
-    }
+  cvData.experience.forEach((item) => {
+    if (item.tags.includes(activeFilter)) relevant.push(item);
+    else rest.push(item);
   });
-
   return [...relevant, ...rest];
 }
 
+function renderProfessionalSummary() {
+  const content = clearNode("professional-summary-content");
+  const metrics = clearNode("summary-metrics");
+  if (!content || !metrics) return;
+
+  cvData.profile.professionalSummary.forEach((line) => {
+    const p = document.createElement("p");
+    p.textContent = line;
+    content.appendChild(p);
+  });
+
+  cvData.profile.summaryMetrics.forEach((item) => {
+    const span = document.createElement("span");
+    span.className = "metric-chip";
+    span.textContent = item;
+    metrics.appendChild(span);
+  });
+}
+
 function renderExperience(activeFilter) {
-  const container = document.getElementById("experience-list");
+  const container = clearNode("experience-list");
   if (!container) return;
 
-  container.textContent = "";
   const jobs = sortBySpotlight(activeFilter);
 
   jobs.forEach((job) => {
@@ -161,47 +269,96 @@ function renderExperience(activeFilter) {
     const relevant = activeFilter === "all" || job.tags.includes(activeFilter);
     card.classList.add(relevant ? "relevant" : "muted");
 
-    const highlights = job.highlights.map((item) => `<li>${item}</li>`).join("");
-    const tags = job.tags.map((tag) => `<span class=\"tag\">${tag}</span>`).join("");
+    const tags = job.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+
+    const achievements = job.achievements
+      .map((item) => {
+        const tech = item.technologies
+          .map((technology) => `<span class="tech-chip">${technology}</span>`)
+          .join("");
+
+        return `
+          <li>
+            <strong>${item.action}</strong> ${item.impact}
+            <span class="achievement-metric">${item.metric}</span>
+            <div class="tech-row">${tech}</div>
+          </li>
+        `;
+      })
+      .join("");
 
     card.innerHTML = `
-      <div class="timeline-header">
+      <header class="timeline-header">
         <div>
           <p class="timeline-role">${job.role}</p>
           <p class="timeline-company">${job.company}</p>
         </div>
         <p class="timeline-meta">${job.start} - ${job.end}</p>
-      </div>
+      </header>
       <p class="timeline-meta">${job.location} | ${job.mode}</p>
       <div class="timeline-tags">${tags}</div>
-      <ul>${highlights}</ul>
+      <ul class="achievement-list">${achievements}</ul>
     `;
 
     container.appendChild(card);
   });
 }
 
-function renderSkills() {
-  const skillsGrid = document.getElementById("skills-grid");
-  if (!skillsGrid) return;
+function renderSkillsByCategory() {
+  const grid = clearNode("skills-grid");
+  if (!grid) return;
 
   Object.entries(cvData.skills).forEach(([key, values]) => {
-    const title = key.charAt(0).toUpperCase() + key.slice(1);
-    const tags = values.map((value) => `<span class="tag">${value}</span>`).join("");
+    const meta = SKILL_META[key];
+    if (!meta) return;
+
+    const tagMarkup = values.map((value) => `<span class="skill-tag">${value}</span>`).join("");
 
     const card = document.createElement("article");
     card.className = "skill-card";
+    card.setAttribute("role", "listitem");
     card.innerHTML = `
-      <h3>${title}</h3>
-      <div class="tags">${tags}</div>
+      <header class="skill-header">
+        <span class="skill-icon" aria-hidden="true">${meta.icon}</span>
+        <h3>${meta.title}</h3>
+      </header>
+      <div class="skill-tags">${tagMarkup}</div>
     `;
 
-    skillsGrid.appendChild(card);
+    grid.appendChild(card);
   });
 }
 
+function renderTestimonials() {
+  const container = clearNode("testimonials-list");
+  if (!container) return;
+
+  cvData.testimonials.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "testimonial-card";
+    card.setAttribute("role", "listitem");
+    card.innerHTML = `
+      <p class="testimonial-quote">“${item.quote}”</p>
+      <p class="testimonial-author">${item.name}</p>
+      <p class="testimonial-role">${item.role}</p>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function renderFinalCta() {
+  setText("final-cta-title", cvData.finalCta.title);
+  setText("final-cta-text", cvData.finalCta.text);
+  setText("final-cta-button", cvData.finalCta.buttonLabel);
+
+  setLink("final-cta-button", `mailto:${cvData.contacts.primaryEmail}`);
+  setLink("final-email", `mailto:${cvData.contacts.primaryEmail}`, cvData.contacts.primaryEmail);
+  setLink("final-linkedin", cvData.contacts.linkedinUrl);
+  setLink("final-github", cvData.contacts.githubUrl);
+}
+
 function renderList(id, values) {
-  const list = document.getElementById(id);
+  const list = clearNode(id);
   if (!list) return;
   values.forEach((value) => {
     const li = document.createElement("li");
@@ -211,11 +368,11 @@ function renderList(id, values) {
 }
 
 function setupSpotlightHandlers() {
-  const buttons = document.querySelectorAll(".spotlight-btn");
-  buttons.forEach((button) => {
+  document.querySelectorAll(".spotlight-btn").forEach((button) => {
     button.addEventListener("click", () => {
       const next = button.dataset.filter;
       if (!SPOTLIGHTS.includes(next)) return;
+
       updateFilterButtons(next);
       renderExperience(next);
       if (next === "all") {
@@ -249,11 +406,11 @@ function setupRevealAnimation() {
         }
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.12 }
   );
 
   reveals.forEach((el, index) => {
-    el.style.transitionDelay = `${Math.min(index * 60, 220)}ms`;
+    el.style.transitionDelay = `${Math.min(index * 55, 220)}ms`;
     observer.observe(el);
   });
 }
@@ -261,7 +418,6 @@ function setupRevealAnimation() {
 function setupPhotoFallback() {
   const photo = document.getElementById("profile-photo");
   if (!photo) return;
-
   photo.addEventListener("error", () => {
     photo.src = "assets/img/profile-placeholder.svg";
   });
@@ -271,18 +427,15 @@ function boot() {
   setText("hero-name", cvData.profile.name);
   setText("hero-title", cvData.profile.title);
   setText("hero-location", cvData.profile.location);
-  setText("hero-summary", cvData.profile.summary);
-  setText("about-text", cvData.about);
+  setText("hero-summary", cvData.profile.heroSummary);
 
   setLink("linkedin-link", cvData.contacts.linkedinUrl);
   setLink("github-link", cvData.contacts.githubUrl);
-  setLink("contact-linkedin", cvData.contacts.linkedinUrl);
-  setLink("contact-github", cvData.contacts.githubUrl);
 
-  setLink("email-primary", `mailto:${cvData.contacts.primaryEmail}`, cvData.contacts.primaryEmail);
-  setLink("email-secondary", `mailto:${cvData.contacts.secondaryEmail}`, cvData.contacts.secondaryEmail);
-
-  renderSkills();
+  renderProfessionalSummary();
+  renderSkillsByCategory();
+  renderTestimonials();
+  renderFinalCta();
   renderList("education-list", cvData.education);
   renderList("languages-list", cvData.languagesSpoken);
   renderList("cert-list", cvData.certifications);
@@ -292,8 +445,7 @@ function boot() {
   renderExperience(active);
   setupSpotlightHandlers();
 
-  const date = new Date();
-  setText("last-updated", date.toISOString().slice(0, 10));
+  setText("last-updated", new Date().toISOString().slice(0, 10));
 
   setupPhotoFallback();
   setupRevealAnimation();

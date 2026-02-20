@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Iván López Marchante | Backend Developer | AI Agent Workflows</title>
-  <meta name="description" content="Professional CV of Iván López Marchante, Backend Developer focused on Java and AI agent workflows with prompts, instructions, and skills.">
+  <title>Iván López | Backend Engineer | Scalable Systems & API Development</title>
+  <meta name="description" content="Iván López is a Backend Engineer focused on scalable systems, API development, Java microservices, performance optimization, and AI automation workflows.">
   <meta name="author" content="Iván López Marchante">
-  <meta name="theme-color" content="#f2eee6">
+  <meta name="theme-color" content="#f1eee7">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Iván López Marchante | Backend Developer | AI Agent Workflows">
-  <meta property="og:description" content="Backend Developer with strong Java expertise and practical leadership in AI agent workflows, Copilot, and Codex adoption.">
+  <meta property="og:title" content="Iván López | Backend Engineer | Scalable Systems & API Development">
+  <meta property="og:description" content="Backend Engineer specialized in Java microservices, REST APIs, scalable architecture, performance optimization, and AI automation workflows.">
   <meta property="og:url" content="https://ivanlpm.github.io/ivan-cv-site/">
   <meta property="og:image" content="https://ivanlpm.github.io/ivan-cv-site/assets/img/og-cover.svg">
   <link rel="canonical" href="https://ivanlpm.github.io/ivan-cv-site/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -24,9 +24,9 @@
   <header class="site-header" aria-label="Profile header">
     <div class="hero-shell reveal">
       <div class="hero-copy">
-        <p class="eyebrow">Curriculum Vitae</p>
+        <p class="eyebrow">Backend Engineer Profile</p>
         <h1 id="hero-name">Iván López Marchante</h1>
-        <p id="hero-title" class="hero-title">Backend Developer | AI Agent Workflows | Java</p>
+        <p id="hero-title" class="hero-title">Backend Engineer | Scalable Systems & API Development</p>
         <p id="hero-location" class="hero-location">Malaga, Spain</p>
         <p id="hero-summary" class="hero-summary"></p>
         <div class="cta-group" aria-label="Primary actions">
@@ -40,36 +40,38 @@
           <source srcset="assets/img/profile.webp" type="image/webp">
           <img id="profile-photo" src="assets/img/profile.jpg" alt="Portrait of Iván López Marchante" loading="eager" decoding="async">
         </picture>
-        <figcaption>Backend Engineer</figcaption>
+        <figcaption>Backend & Software Engineer</figcaption>
       </figure>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="section reveal" id="about" aria-labelledby="about-title">
-      <h2 id="about-title">About</h2>
-      <p id="about-text"></p>
+    <section class="section reveal" id="professional-summary" aria-labelledby="professional-summary-title">
+      <h2 id="professional-summary-title">Professional Summary</h2>
+      <div id="professional-summary-content" class="summary-copy"></div>
+      <div id="summary-metrics" class="summary-metrics" aria-label="Impact highlights"></div>
     </section>
 
-    <section class="section reveal" id="spotlight" aria-labelledby="spotlight-title">
-      <h2 id="spotlight-title">Spotlight Skills</h2>
-      <p>Filter experience by focus area to quickly explore relevant impact.</p>
+    <section class="section reveal" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <p>Results-oriented backend delivery with measurable technical and business impact.</p>
       <div id="spotlight-filters" class="spotlight-filters" role="toolbar" aria-label="Experience spotlight filters">
         <button type="button" class="spotlight-btn" data-filter="all" aria-pressed="true">All</button>
         <button type="button" class="spotlight-btn" data-filter="backend" aria-pressed="false">Backend</button>
         <button type="button" class="spotlight-btn" data-filter="ai-agents" aria-pressed="false">AI Agents</button>
         <button type="button" class="spotlight-btn" data-filter="leadership" aria-pressed="false">Leadership</button>
       </div>
-    </section>
-
-    <section class="section reveal" id="experience" aria-labelledby="experience-title">
-      <h2 id="experience-title">Experience</h2>
       <div id="experience-list" class="timeline" role="list"></div>
     </section>
 
     <section class="section reveal" id="skills" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills</h2>
-      <div id="skills-grid" class="skills-grid"></div>
+      <h2 id="skills-title">Core Skills</h2>
+      <div id="skills-grid" class="skills-grid" role="list"></div>
+    </section>
+
+    <section class="section reveal" id="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">Testimonials</h2>
+      <div id="testimonials-list" class="testimonials-grid" role="list"></div>
     </section>
 
     <section class="section reveal" id="education" aria-labelledby="education-title">
@@ -90,15 +92,16 @@
       </div>
     </section>
 
-    <section class="section reveal" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <p>Open to backend engineering opportunities and AI enablement initiatives.</p>
-      <ul class="contact-list">
-        <li><a id="email-primary" href="#"></a></li>
-        <li><a id="email-secondary" href="#"></a></li>
-        <li><a id="contact-linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a id="contact-github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      </ul>
+    <section class="section final-cta reveal" id="final-cta" aria-labelledby="final-cta-title">
+      <h2 id="final-cta-title">Let’s Work Together</h2>
+      <p id="final-cta-text"></p>
+      <a id="final-cta-button" class="btn btn-primary" href="#">Contact Me</a>
+      <p class="final-cta-contact"><a id="final-email" href="#"></a></p>
+      <p class="final-cta-links">
+        <a id="final-linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>•</span>
+        <a id="final-github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
     </section>
   </main>
 
