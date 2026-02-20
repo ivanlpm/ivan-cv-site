@@ -3,24 +3,24 @@
   <desc id="desc">Backend Developer and AI Agent Workflows</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#0c1015" />
-      <stop offset="100%" stop-color="#171d26" />
+      <stop offset="0%" stop-color="#f8f4ec" />
+      <stop offset="100%" stop-color="#ede5d7" />
     </linearGradient>
     <clipPath id="portraitCircle">
-      <circle cx="963" cy="315" r="145" />
+      <circle cx="965" cy="315" r="148" />
     </clipPath>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)" />
-  <circle cx="1020" cy="80" r="190" fill="#b3976a" opacity="0.18" />
-  <rect x="48" y="48" width="1104" height="534" rx="26" fill="none" stroke="#c6ad84" opacity="0.7" />
+  <circle cx="1070" cy="70" r="220" fill="#d7c3a0" opacity="0.28" />
+  <rect x="46" y="46" width="1108" height="538" rx="24" fill="#fffdf9" stroke="#d9ccb6" stroke-width="2" />
 
-  <text x="88" y="208" font-family="Georgia, serif" font-size="74" fill="#f4efe5">Iván López Marchante</text>
-  <text x="88" y="276" font-family="Arial, sans-serif" font-size="34" fill="#d9c9a6">Backend Developer | AI Agent Workflows | Java</text>
-  <text x="88" y="334" font-family="Arial, sans-serif" font-size="26" fill="#c8c3b6">Microservices, Copilot/Codex Enablement, Prompt Engineering</text>
-  <text x="88" y="474" font-family="Arial, sans-serif" font-size="24" fill="#d9c9a6">ivanlpm.github.io/ivan-cv-site</text>
+  <text x="88" y="204" font-family="Georgia, serif" font-size="74" fill="#20262d">Iván López Marchante</text>
+  <text x="88" y="272" font-family="Arial, sans-serif" font-size="33" fill="#4e3f29">Backend Developer | AI Agent Workflows | Java</text>
+  <text x="88" y="332" font-family="Arial, sans-serif" font-size="26" fill="#4f5760">Microservices, Copilot/Codex Enablement, Prompt Engineering</text>
+  <text x="88" y="476" font-family="Arial, sans-serif" font-size="24" fill="#4e3f29">ivanlpm.github.io/ivan-cv-site</text>
 
-  <circle cx="963" cy="315" r="154" fill="none" stroke="#c6ad84" stroke-width="6" />
+  <circle cx="965" cy="315" r="158" fill="none" stroke="#c8ad82" stroke-width="6" />
   <g clip-path="url(#portraitCircle)">
-    <image href="profile.jpg" x="810" y="160" width="306" height="310" preserveAspectRatio="xMidYMid slice" />
+    <image href="profile.jpg" x="810" y="160" width="310" height="312" preserveAspectRatio="xMidYMid slice" />
   </g>
 </svg>
