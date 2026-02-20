@@ -136,8 +136,7 @@ const cvData = {
   contactSection: {
     title: "Contact",
     text:
-      "If you want to connect about backend engineering, Java, microservices, or AI enablement, feel free to reach out.",
-    buttonLabel: "Send Email"
+      "If you want to connect about backend engineering, Java, microservices, or AI enablement, feel free to reach out."
   },
   education: [
     "Bachelor's Degree in Software Engineering - University of Malaga (2021)",
@@ -301,9 +300,7 @@ function renderSkillsByCategory() {
 function renderContactSection() {
   setText("contact-title", cvData.contactSection.title);
   setText("contact-text", cvData.contactSection.text);
-  setText("contact-button", cvData.contactSection.buttonLabel);
 
-  setLink("contact-button", `mailto:${cvData.contacts.primaryEmail}`);
   setLink("contact-primary-email", `mailto:${cvData.contacts.primaryEmail}`, cvData.contacts.primaryEmail);
   setLink("contact-secondary-email", `mailto:${cvData.contacts.secondaryEmail}`, cvData.contacts.secondaryEmail);
   setLink("contact-linkedin", cvData.contacts.linkedinUrl);
