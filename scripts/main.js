@@ -135,26 +135,6 @@ const cvData = {
     cloudDevops: ["Docker", "GCP", "Bitbucket Pipelines", "Grafana", "Kibana", "CI/CD"],
     aiAutomation: ["Copilot", "Codex", "Prompt Engineering", "Instruction Design", "AI Workflows", "Automation Patterns"]
   },
-  testimonials: [
-    {
-      quote:
-        "Iván consistently turns complex backend requirements into scalable, production-ready services while raising delivery standards across the team.",
-      name: "Engineering Manager",
-      role: "Backend Platform"
-    },
-    {
-      quote:
-        "His approach to API design and performance optimization helped us ship faster with fewer production issues.",
-      name: "Tech Lead",
-      role: "Distributed Systems"
-    },
-    {
-      quote:
-        "He combines deep technical execution with practical AI enablement, making other engineers more effective in day-to-day work.",
-      name: "Product Manager",
-      role: "Digital Products"
-    }
-  ],
   finalCta: {
     title: "Let’s Work Together",
     text:
@@ -307,23 +287,6 @@ function renderSkillsByCategory() {
   });
 }
 
-function renderTestimonials() {
-  const container = clearNode("testimonials-list");
-  if (!container) return;
-
-  cvData.testimonials.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "testimonial-card";
-    card.setAttribute("role", "listitem");
-    card.innerHTML = `
-      <p class="testimonial-quote">“${item.quote}”</p>
-      <p class="testimonial-author">${item.name}</p>
-      <p class="testimonial-role">${item.role}</p>
-    `;
-    container.appendChild(card);
-  });
-}
-
 function renderFinalCta() {
   setText("final-cta-title", cvData.finalCta.title);
   setText("final-cta-text", cvData.finalCta.text);
@@ -412,7 +375,6 @@ function boot() {
 
   renderProfessionalSummary();
   renderSkillsByCategory();
-  renderTestimonials();
   renderFinalCta();
   renderList("education-list", cvData.education);
   renderList("languages-list", cvData.languagesSpoken);

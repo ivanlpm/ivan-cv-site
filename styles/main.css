@@ -364,34 +364,6 @@ h3 {
   padding: 0.22rem 0.58rem;
 }
 
-.testimonials-grid {
-  margin-top: 0.95rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 0.82rem;
-}
-
-.testimonial-card {
-  padding: 0.94rem;
-}
-
-.testimonial-quote {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-.testimonial-author {
-  margin-top: 0.62rem;
-  font-weight: 700;
-  color: #24313e;
-}
-
-.testimonial-role {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.84rem;
-}
-
 .info-columns {
   margin-top: 0.95rem;
   display: grid;
@@ -451,7 +423,6 @@ a:focus-visible,
 
 .timeline-card,
 .skill-card,
-.testimonial-card,
 .info-columns article {
   border: 1px solid var(--border);
   border-radius: 15px;
