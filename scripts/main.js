@@ -171,6 +171,19 @@ function setLink(id, href, text) {
   if (text) el.textContent = text;
 }
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (char) => {
+    const map = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#39;"
+    };
+    return map[char];
+  });
+}
+
 function clearNode(id) {
   const el = document.getElementById(id);
   if (el) el.textContent = "";
@@ -226,17 +239,17 @@ function renderExperience(activeFilter) {
     const relevant = activeFilter === "all" || job.tags.includes(activeFilter);
     card.classList.add(relevant ? "relevant" : "muted");
 
-    const tags = job.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+    const tags = job.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
 
     const achievements = job.achievements
       .map((item) => {
         const tech = item.technologies
-          .map((technology) => `<span class="tech-chip">${technology}</span>`)
+          .map((technology) => `<span class="tech-chip">${escapeHtml(technology)}</span>`)
           .join("");
 
         return `
           <li>
-            <strong>${item.action}</strong> ${item.impact}
+            <strong>${escapeHtml(item.action)}</strong> ${escapeHtml(item.impact)}
             <div class="tech-row">${tech}</div>
           </li>
         `;
@@ -246,12 +259,12 @@ function renderExperience(activeFilter) {
     card.innerHTML = `
       <header class="timeline-header">
         <div>
-          <p class="timeline-role">${job.role}</p>
-          <p class="timeline-company">${job.company}</p>
+          <p class="timeline-role">${escapeHtml(job.role)}</p>
+          <p class="timeline-company">${escapeHtml(job.company)}</p>
         </div>
-        <p class="timeline-meta">${job.start} - ${job.end}</p>
+        <p class="timeline-meta">${escapeHtml(job.start)} - ${escapeHtml(job.end)}</p>
       </header>
-      <p class="timeline-meta">${job.location} | ${job.mode}</p>
+      <p class="timeline-meta">${escapeHtml(job.location)} | ${escapeHtml(job.mode)}</p>
       <div class="timeline-tags">${tags}</div>
       <ul class="achievement-list">${achievements}</ul>
     `;
@@ -268,15 +281,15 @@ function renderSkillsByCategory() {
     const meta = SKILL_META[key];
     if (!meta) return;
 
-    const tagMarkup = values.map((value) => `<span class="skill-tag">${value}</span>`).join("");
+    const tagMarkup = values.map((value) => `<span class="skill-tag">${escapeHtml(value)}</span>`).join("");
 
     const card = document.createElement("article");
     card.className = "skill-card";
     card.setAttribute("role", "listitem");
     card.innerHTML = `
       <header class="skill-header">
-        <span class="skill-icon" aria-hidden="true">${meta.icon}</span>
-        <h3>${meta.title}</h3>
+        <span class="skill-icon" aria-hidden="true">${escapeHtml(meta.icon)}</span>
+        <h3>${escapeHtml(meta.title)}</h3>
       </header>
       <div class="skill-tags">${tagMarkup}</div>
     `;
