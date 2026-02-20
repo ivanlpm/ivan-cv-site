@@ -1,16 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Ivan Lopez Marchante CV</title>
+  <title id="title">Iván López Marchante CV</title>
   <desc id="desc">Backend Developer and AI Agent Workflows</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#f8f4eb" />
-      <stop offset="100%" stop-color="#e8efe2" />
+      <stop offset="0%" stop-color="#0c1015" />
+      <stop offset="100%" stop-color="#171d26" />
     </linearGradient>
+    <clipPath id="portraitCircle">
+      <circle cx="963" cy="315" r="145" />
+    </clipPath>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)" />
-  <rect x="56" y="56" width="1088" height="518" rx="24" fill="#fffdf8" stroke="#d8dccf" stroke-width="2" />
-  <text x="100" y="220" font-family="Georgia, serif" font-size="72" fill="#1e241f">Ivan Lopez Marchante</text>
-  <text x="100" y="290" font-family="Arial, sans-serif" font-size="36" fill="#3f5442">Backend Developer | AI Agent Workflows | Java</text>
-  <text x="100" y="360" font-family="Arial, sans-serif" font-size="28" fill="#5e675f">Microservices, Copilot/Codex Enablement, Engineering Excellence</text>
-  <text x="100" y="460" font-family="Arial, sans-serif" font-size="24" fill="#3f5442">ivanlpm.github.io/ivan-cv-site</text>
+  <circle cx="1020" cy="80" r="190" fill="#b3976a" opacity="0.18" />
+  <rect x="48" y="48" width="1104" height="534" rx="26" fill="none" stroke="#c6ad84" opacity="0.7" />
+
+  <text x="88" y="208" font-family="Georgia, serif" font-size="74" fill="#f4efe5">Iván López Marchante</text>
+  <text x="88" y="276" font-family="Arial, sans-serif" font-size="34" fill="#d9c9a6">Backend Developer | AI Agent Workflows | Java</text>
+  <text x="88" y="334" font-family="Arial, sans-serif" font-size="26" fill="#c8c3b6">Microservices, Copilot/Codex Enablement, Prompt Engineering</text>
+  <text x="88" y="474" font-family="Arial, sans-serif" font-size="24" fill="#d9c9a6">ivanlpm.github.io/ivan-cv-site</text>
+
+  <circle cx="963" cy="315" r="154" fill="none" stroke="#c6ad84" stroke-width="6" />
+  <g clip-path="url(#portraitCircle)">
+    <image href="profile.jpg" x="810" y="160" width="306" height="310" preserveAspectRatio="xMidYMid slice" />
+  </g>
 </svg>

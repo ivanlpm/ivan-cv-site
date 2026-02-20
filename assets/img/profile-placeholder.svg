@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">Placeholder portrait for Iván López Marchante</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151a22"/>
+      <stop offset="100%" stop-color="#2a313d"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <circle cx="450" cy="420" r="200" fill="#d5d8de" opacity="0.9"/>
+  <rect x="180" y="680" width="540" height="380" rx="190" fill="#d5d8de" opacity="0.9"/>
+  <text x="450" y="1140" text-anchor="middle" fill="#ece6da" font-family="Arial, sans-serif" font-size="44">Add assets/img/profile.jpg</text>
+</svg>

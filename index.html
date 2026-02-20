@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ivan Lopez Marchante | Backend Developer | AI Agent Workflows</title>
-  <meta name="description" content="Professional CV of Ivan Lopez Marchante, Backend Developer focused on Java and AI agent workflows with prompts, instructions, and skills.">
-  <meta name="author" content="Ivan Lopez Marchante">
-  <meta name="theme-color" content="#f5f1e8">
+  <title>Iván López Marchante | Backend Developer | AI Agent Workflows</title>
+  <meta name="description" content="Professional CV of Iván López Marchante, Backend Developer focused on Java and AI agent workflows with prompts, instructions, and skills.">
+  <meta name="author" content="Iván López Marchante">
+  <meta name="theme-color" content="#171a1f">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ivan Lopez Marchante | Backend Developer | AI Agent Workflows">
+  <meta property="og:title" content="Iván López Marchante | Backend Developer | AI Agent Workflows">
   <meta property="og:description" content="Backend Developer with strong Java expertise and practical leadership in AI agent workflows, Copilot, and Codex adoption.">
   <meta property="og:url" content="https://ivanlpm.github.io/ivan-cv-site/">
   <meta property="og:image" content="https://ivanlpm.github.io/ivan-cv-site/assets/img/og-cover.svg">
@@ -23,16 +23,25 @@
 
   <header class="site-header" aria-label="Profile header">
     <div class="hero-shell reveal">
-      <p class="eyebrow">Curriculum Vitae</p>
-      <h1>Ivan Lopez Marchante</h1>
-      <p id="hero-title" class="hero-title">Backend Developer | AI Agent Workflows | Java</p>
-      <p id="hero-location" class="hero-location">Malaga, Spain</p>
-      <p id="hero-summary" class="hero-summary"></p>
-      <div class="cta-group" aria-label="Primary actions">
-        <a id="linkedin-link" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
-        <a id="github-link" class="btn btn-secondary" href="#" target="_blank" rel="noopener noreferrer">View GitHub</a>
-        <a id="download-cv" class="btn btn-secondary" href="assets/cv/IVAN LOPEZ MARCHANTE CV-2.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+      <div class="hero-copy">
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1 id="hero-name">Iván López Marchante</h1>
+        <p id="hero-title" class="hero-title">Backend Developer | AI Agent Workflows | Java</p>
+        <p id="hero-location" class="hero-location">Malaga, Spain</p>
+        <p id="hero-summary" class="hero-summary"></p>
+        <div class="cta-group" aria-label="Primary actions">
+          <a id="linkedin-link" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+          <a id="github-link" class="btn btn-secondary" href="#" target="_blank" rel="noopener noreferrer">View GitHub</a>
+          <a id="download-cv" class="btn btn-secondary" href="assets/cv/IVAN LOPEZ MARCHANTE CV-2.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+        </div>
       </div>
+      <figure class="hero-portrait" aria-label="Profile portrait">
+        <picture>
+          <source srcset="assets/img/profile.webp" type="image/webp">
+          <img id="profile-photo" src="assets/img/profile.jpg" alt="Portrait of Iván López Marchante" loading="eager" decoding="async">
+        </picture>
+        <figcaption>Backend Engineer and AI Enablement Advocate</figcaption>
+      </figure>
     </div>
   </header>
 
@@ -40,6 +49,17 @@
     <section class="section reveal" id="about" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <p id="about-text"></p>
+    </section>
+
+    <section class="section reveal" id="spotlight" aria-labelledby="spotlight-title">
+      <h2 id="spotlight-title">Spotlight Skills</h2>
+      <p>Filter experience by focus area to quickly explore relevant impact.</p>
+      <div id="spotlight-filters" class="spotlight-filters" role="toolbar" aria-label="Experience spotlight filters">
+        <button type="button" class="spotlight-btn" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="spotlight-btn" data-filter="backend" aria-pressed="false">Backend</button>
+        <button type="button" class="spotlight-btn" data-filter="ai-agents" aria-pressed="false">AI Agents</button>
+        <button type="button" class="spotlight-btn" data-filter="leadership" aria-pressed="false">Leadership</button>
+      </div>
     </section>
 
     <section class="section reveal" id="experience" aria-labelledby="experience-title">

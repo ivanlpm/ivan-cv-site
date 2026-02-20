@@ -1,6 +1,6 @@
 const cvData = {
   profile: {
-    name: "Ivan Lopez Marchante",
+    name: "Iván López Marchante",
     title: "Backend Developer | AI Agents, Prompt Engineering & Java",
     location: "Malaga, Spain",
     summary:
@@ -22,6 +22,7 @@ const cvData = {
       end: "Present",
       location: "Malaga, Andalucia, Spain",
       mode: "Hybrid | Full-time",
+      tags: ["backend", "ai-agents", "leadership"],
       highlights: [
         "Designed and applied AI agent workflows using structured prompts, reusable instructions, and skill-based execution patterns for backend delivery tasks.",
         "Improved engineering throughput by integrating Copilot and Codex into day-to-day development, code review preparation, and troubleshooting routines.",
@@ -37,6 +38,7 @@ const cvData = {
       end: "Sep 2025",
       location: "Spain",
       mode: "Full-time",
+      tags: ["backend"],
       highlights: [
         "Implemented and maintained backend services for factory-management flows (orders, raw materials, and factory processes).",
         "Executed maintenance and modernization of legacy services, including dependency upgrades and production bug fixes.",
@@ -50,6 +52,7 @@ const cvData = {
       end: "Dec 2023",
       location: "Remote",
       mode: "Full-time",
+      tags: ["backend"],
       highlights: [
         "Built delivery-order endpoints and event-driven integrations for UberEats, Glovo, and JustEat.",
         "Migrated legacy delivery systems toward a unified order-management platform.",
@@ -63,6 +66,7 @@ const cvData = {
       end: "Mar 2023",
       location: "Remote",
       mode: "Full-time",
+      tags: ["backend"],
       highlights: [
         "Contributed to backend implementation and integration tasks in enterprise microservices projects.",
         "Collaborated with cross-functional teams under agile delivery practices."
@@ -75,6 +79,7 @@ const cvData = {
       end: "Oct 2022",
       location: "Malaga, Spain",
       mode: "Full-time",
+      tags: ["backend"],
       highlights: [
         "Developed a document-management microservice for labor-risk prevention in a SaaS platform.",
         "Implemented REST endpoints and service layers with focus on maintainability and testing.",
@@ -99,6 +104,8 @@ const cvData = {
   ]
 };
 
+const SPOTLIGHTS = ["all", "backend", "ai-agents", "leadership"];
+
 function setText(id, value) {
   const el = document.getElementById(id);
   if (el) el.textContent = value;
@@ -111,16 +118,51 @@ function setLink(id, href, text) {
   if (text) el.textContent = text;
 }
 
-function renderExperience() {
+function getActiveSpotlight() {
+  const hash = window.location.hash.replace("#", "").toLowerCase();
+  return SPOTLIGHTS.includes(hash) ? hash : "all";
+}
+
+function updateFilterButtons(activeFilter) {
+  document.querySelectorAll(".spotlight-btn").forEach((button) => {
+    const isActive = button.dataset.filter === activeFilter;
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+function sortBySpotlight(activeFilter) {
+  if (activeFilter === "all") return [...cvData.experience];
+  const relevant = [];
+  const rest = [];
+
+  cvData.experience.forEach((exp) => {
+    if (exp.tags.includes(activeFilter)) {
+      relevant.push(exp);
+    } else {
+      rest.push(exp);
+    }
+  });
+
+  return [...relevant, ...rest];
+}
+
+function renderExperience(activeFilter) {
   const container = document.getElementById("experience-list");
   if (!container) return;
 
-  cvData.experience.forEach((job) => {
+  container.textContent = "";
+  const jobs = sortBySpotlight(activeFilter);
+
+  jobs.forEach((job) => {
     const card = document.createElement("article");
     card.className = "timeline-card";
     card.setAttribute("role", "listitem");
 
+    const relevant = activeFilter === "all" || job.tags.includes(activeFilter);
+    card.classList.add(relevant ? "relevant" : "muted");
+
     const highlights = job.highlights.map((item) => `<li>${item}</li>`).join("");
+    const tags = job.tags.map((tag) => `<span class=\"tag\">${tag}</span>`).join("");
 
     card.innerHTML = `
       <div class="timeline-header">
@@ -131,6 +173,7 @@ function renderExperience() {
         <p class="timeline-meta">${job.start} - ${job.end}</p>
       </div>
       <p class="timeline-meta">${job.location} | ${job.mode}</p>
+      <div class="timeline-tags">${tags}</div>
       <ul>${highlights}</ul>
     `;
 
@@ -167,6 +210,29 @@ function renderList(id, values) {
   });
 }
 
+function setupSpotlightHandlers() {
+  const buttons = document.querySelectorAll(".spotlight-btn");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const next = button.dataset.filter;
+      if (!SPOTLIGHTS.includes(next)) return;
+      updateFilterButtons(next);
+      renderExperience(next);
+      if (next === "all") {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+      } else {
+        window.location.hash = next;
+      }
+    });
+  });
+
+  window.addEventListener("hashchange", () => {
+    const active = getActiveSpotlight();
+    updateFilterButtons(active);
+    renderExperience(active);
+  });
+}
+
 function setupRevealAnimation() {
   const reveals = document.querySelectorAll(".reveal");
   if (!("IntersectionObserver" in window)) {
@@ -183,13 +249,26 @@ function setupRevealAnimation() {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.14 }
   );
 
-  reveals.forEach((el) => observer.observe(el));
+  reveals.forEach((el, index) => {
+    el.style.transitionDelay = `${Math.min(index * 60, 220)}ms`;
+    observer.observe(el);
+  });
+}
+
+function setupPhotoFallback() {
+  const photo = document.getElementById("profile-photo");
+  if (!photo) return;
+
+  photo.addEventListener("error", () => {
+    photo.src = "assets/img/profile-placeholder.svg";
+  });
 }
 
 function boot() {
+  setText("hero-name", cvData.profile.name);
   setText("hero-title", cvData.profile.title);
   setText("hero-location", cvData.profile.location);
   setText("hero-summary", cvData.profile.summary);
@@ -201,21 +280,22 @@ function boot() {
   setLink("contact-github", cvData.contacts.githubUrl);
 
   setLink("email-primary", `mailto:${cvData.contacts.primaryEmail}`, cvData.contacts.primaryEmail);
-  setLink(
-    "email-secondary",
-    `mailto:${cvData.contacts.secondaryEmail}`,
-    cvData.contacts.secondaryEmail
-  );
+  setLink("email-secondary", `mailto:${cvData.contacts.secondaryEmail}`, cvData.contacts.secondaryEmail);
 
-  renderExperience();
   renderSkills();
   renderList("education-list", cvData.education);
   renderList("languages-list", cvData.languagesSpoken);
   renderList("cert-list", cvData.certifications);
 
+  const active = getActiveSpotlight();
+  updateFilterButtons(active);
+  renderExperience(active);
+  setupSpotlightHandlers();
+
   const date = new Date();
   setText("last-updated", date.toISOString().slice(0, 10));
 
+  setupPhotoFallback();
   setupRevealAnimation();
 }
 
