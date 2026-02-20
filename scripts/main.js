@@ -10,11 +10,6 @@ const cvData = {
       "Experienced in performance optimization, reliability hardening, and production incident reduction across distributed systems.",
       "Strong execution in delivery acceleration through reusable automation patterns and AI workflows integrated into day-to-day engineering.",
       "Cross-team collaborator who aligns technical decisions with measurable business impact and sustainable long-term maintainability."
-    ],
-    summaryMetrics: [
-      "Reduced API latency by ~X%",
-      "Improved delivery throughput by ~Y%",
-      "Saved ~Z engineering hours/week via automation"
     ]
   },
   contacts: {
@@ -37,21 +32,18 @@ const cvData = {
           action: "Designed",
           impact:
             "scalable backend services and API contracts for buying workflows, standardizing service boundaries and reducing integration complexity.",
-          metric: "Faster cross-service delivery by ~X%",
           technologies: ["Java", "Spring Boot", "REST APIs", "Kafka"]
         },
         {
           action: "Optimized",
           impact:
             "engineering throughput by embedding Copilot and Codex workflows into development, review preparation, and troubleshooting practices.",
-          metric: "Cycle-time improvement of ~Y%",
           technologies: ["Copilot", "Codex", "Prompt Engineering", "AI Workflows"]
         },
         {
           action: "Led",
           impact:
             "enablement sessions across multiple teams on prompt quality, instruction patterns, and reusable skill-driven execution.",
-          metric: "~Z hours/week saved across teams",
           technologies: ["Team Enablement", "Engineering Standards"]
         }
       ]
@@ -69,14 +61,12 @@ const cvData = {
           action: "Built",
           impact:
             "factory-management APIs and backend business flows, improving domain consistency for orders and raw-material processing.",
-          metric: "Service reliability increased by ~X%",
           technologies: ["Java", "Spring Boot", "PostgreSQL", "Microservices"]
         },
         {
           action: "Improved",
           impact:
             "legacy platform stability through targeted maintenance, dependency upgrades, and production bug resolution.",
-          metric: "Incident volume reduced by ~Y%",
           technologies: ["JUnit", "Integration Testing", "Grafana"]
         }
       ]
@@ -94,14 +84,12 @@ const cvData = {
           action: "Developed",
           impact:
             "delivery-order APIs and event-driven integrations for UberEats, Glovo, and JustEat.",
-          metric: "Order-processing efficiency improved by ~X%",
           technologies: ["Java", "Kafka", "GCP", "Microservices"]
         },
         {
           action: "Reduced",
           impact:
             "production resolution times by strengthening observability and flow diagnostics across distributed services.",
-          metric: "MTTR reduced by ~Y%",
           technologies: ["BigQuery", "Kibana", "Incident Management"]
         }
       ]
@@ -119,7 +107,6 @@ const cvData = {
           action: "Delivered",
           impact:
             "backend implementations and integrations in enterprise projects under agile timelines.",
-          metric: "Delivery predictability improved by ~X%",
           technologies: ["Java", "Scrum", "API Integration"]
         }
       ]
@@ -137,7 +124,6 @@ const cvData = {
           action: "Implemented",
           impact:
             "document-management microservices and REST endpoints for labor-risk prevention workflows in SaaS.",
-          metric: "Processing lead time reduced by ~X%",
           technologies: ["Java", "Spring Boot", "REST APIs", "MySQL"]
         }
       ]
@@ -238,8 +224,7 @@ function sortBySpotlight(activeFilter) {
 
 function renderProfessionalSummary() {
   const content = clearNode("professional-summary-content");
-  const metrics = clearNode("summary-metrics");
-  if (!content || !metrics) return;
+  if (!content) return;
 
   cvData.profile.professionalSummary.forEach((line) => {
     const p = document.createElement("p");
@@ -247,12 +232,6 @@ function renderProfessionalSummary() {
     content.appendChild(p);
   });
 
-  cvData.profile.summaryMetrics.forEach((item) => {
-    const span = document.createElement("span");
-    span.className = "metric-chip";
-    span.textContent = item;
-    metrics.appendChild(span);
-  });
 }
 
 function renderExperience(activeFilter) {
@@ -280,7 +259,6 @@ function renderExperience(activeFilter) {
         return `
           <li>
             <strong>${item.action}</strong> ${item.impact}
-            <span class="achievement-metric">${item.metric}</span>
             <div class="tech-row">${tech}</div>
           </li>
         `;
