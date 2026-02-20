@@ -1,10 +1,10 @@
 const cvData = {
   profile: {
     name: "Ivan Lopez Marchante",
-    title: "Backend Developer | AI Agent Workflows | Java & Go",
+    title: "Backend Developer | AI Agents, Prompt Engineering & Java/Go",
     location: "Malaga, Spain",
     summary:
-      "Backend engineer delivering reliable microservices while driving practical AI adoption through prompt engineering, reusable instructions, and skill-based agent workflows."
+      "Backend engineer delivering reliable microservices while driving practical AI adoption through prompts, reusable instructions, and skill-based agent workflows."
   },
   contacts: {
     linkedinUrl: "https://www.linkedin.com/in/ivan-lopez-marchante/",
@@ -13,19 +13,20 @@ const cvData = {
     githubUrl: "https://github.com/ivanlpm"
   },
   about:
-    "I build backend systems focused on reliability, clear architecture, and operational quality. In my latest role, I have combined software delivery with AI enablement, helping teams adopt Copilot and Codex with repeatable standards around prompts, instructions, and workflow skills.",
+    "I build backend systems focused on reliability, clear architecture, and operational quality. In my current role at BESTSELLER, I combine software delivery with AI enablement by helping teams adopt Copilot and Codex using repeatable standards for prompts, instructions, and workflow skills.",
   experience: [
     {
       company: "BESTSELLER",
       role: "Backend Developer",
       start: "Sep 2025",
       end: "Present",
-      location: "Malaga, Spain",
-      mode: "Hybrid",
+      location: "Malaga, Andalucia, Spain",
+      mode: "Hybrid | Full-time",
       highlights: [
-        "Designed and applied AI agent workflows using structured prompts, reusable instructions, and skill-based execution patterns.",
-        "Improved engineering throughput by integrating Copilot and Codex into day-to-day backend development tasks.",
-        "Trained teammates across multiple teams on practical Copilot/Codex usage, including prompt quality, guardrails, and repeatable practices.",
+        "Designed and applied AI agent workflows using structured prompts, reusable instructions, and skill-based execution patterns for backend delivery tasks.",
+        "Improved engineering throughput by integrating Copilot and Codex into day-to-day development, code review preparation, and troubleshooting routines.",
+        "Trained teammates from different teams on practical Copilot and Codex usage, including prompt quality, guardrails, and reusable working patterns.",
+        "Promoted internal AI adoption with practical sessions and examples to help engineers use prompts, instructions, and skills consistently.",
         "Continued backend delivery in a microservices ecosystem, prioritizing API reliability, maintainability, and team engineering standards."
       ]
     },
