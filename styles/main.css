@@ -1,6 +1,12 @@
 :root {
-  --bg: #f1eee7;
-  --bg-soft: #f8f5ef;
+  /* Switch background themes by changing `body` class:
+     `theme-tech-blue`, `theme-warm-editorial`, or `theme-geo-grid`. */
+  --bg-base-start: #edf3f8;
+  --bg-base-end: #e2ebf3;
+  --bg-accent-1: rgba(47, 95, 142, 0.18);
+  --bg-accent-2: rgba(126, 165, 201, 0.16);
+  --bg-accent-3: rgba(209, 222, 236, 0.22);
+  --bg-pattern: none;
   --surface: #ffffff;
   --surface-soft: #fbfdff;
   --text: #1f2730;
@@ -29,11 +35,43 @@ body {
 body {
   font-family: "Manrope", sans-serif;
   background:
-    radial-gradient(circle at 90% 4%, rgba(47, 95, 142, 0.1), transparent 26%),
-    radial-gradient(circle at 10% -8%, rgba(47, 95, 142, 0.08), transparent 24%),
-    linear-gradient(180deg, var(--bg) 0%, #eae6dc 100%);
+    var(--bg-pattern),
+    radial-gradient(120% 55% at 92% 4%, var(--bg-accent-1) 0%, transparent 58%),
+    radial-gradient(100% 56% at 6% -8%, var(--bg-accent-2) 0%, transparent 60%),
+    radial-gradient(88% 48% at 50% 112%, var(--bg-accent-3) 0%, transparent 56%),
+    linear-gradient(180deg, var(--bg-base-start) 0%, var(--bg-base-end) 100%);
   color: var(--text);
   line-height: 1.65;
+}
+
+body.theme-tech-blue {
+  --bg-base-start: #edf3f8;
+  --bg-base-end: #e2ebf3;
+  --bg-accent-1: rgba(47, 95, 142, 0.18);
+  --bg-accent-2: rgba(126, 165, 201, 0.16);
+  --bg-accent-3: rgba(209, 222, 236, 0.22);
+  --bg-pattern: none;
+}
+
+body.theme-warm-editorial {
+  --bg-base-start: #f6f1e8;
+  --bg-base-end: #ece3d4;
+  --bg-accent-1: rgba(188, 156, 102, 0.18);
+  --bg-accent-2: rgba(132, 156, 174, 0.13);
+  --bg-accent-3: rgba(242, 224, 193, 0.2);
+  --bg-pattern: radial-gradient(115% 56% at 50% 108%, rgba(160, 128, 86, 0.08) 0%, transparent 52%);
+}
+
+body.theme-geo-grid {
+  --bg-base-start: #ecf3f8;
+  --bg-base-end: #dde8f1;
+  --bg-accent-1: rgba(79, 121, 160, 0.2);
+  --bg-accent-2: rgba(167, 195, 219, 0.16);
+  --bg-accent-3: rgba(212, 230, 242, 0.18);
+  --bg-pattern:
+    linear-gradient(rgba(54, 92, 125, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(54, 92, 125, 0.07) 1px, transparent 1px);
+  background-size: 34px 34px, 34px 34px, auto, auto, auto, auto;
 }
 
 .skip-link {
